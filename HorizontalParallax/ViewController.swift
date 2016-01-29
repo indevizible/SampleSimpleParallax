@@ -50,7 +50,7 @@ class Cell: UICollectionViewCell {
         var tmpView:UIView? = self
         while let view = tmpView {
             if view.clipsToBounds {
-                view.clipsToBounds = true
+                view.clipsToBounds = false
             }
             tmpView = view.superview
             if let _ = tmpView as? UICollectionView  {
