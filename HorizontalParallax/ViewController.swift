@@ -14,19 +14,19 @@ enum ThemeColor: String {
     case White = "#ffffff"
     case Red = "#ff0000"
     case Green = "#00ff00"
+    case IrisBlue = "#1e90ff"
     
     func color() -> UIColor {
         return UIColor(rgba: rawValue)
     }
     
     init?(rawColor:UIColor) {
-        if let color = ThemeColor(rawValue: rawColor.hexString(false)) {
+        if let color = ThemeColor(rawValue: rawColor.hexString(false).lowercaseString) {
             self = color
         }else{
             return nil
         }
     }
-    
 }
 
 class Cell: UICollectionViewCell {
@@ -71,6 +71,11 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         print(ThemeColor(rawColor: UIColor.blackColor()))
         print(ThemeColor(rawValue: "#ff0000"))
+        
+        let irisBlue = ThemeColor(rawColor: UIColor(rgba: "#1e90ff"))
+        
+        print(irisBlue)
+        
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
