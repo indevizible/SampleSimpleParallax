@@ -29,14 +29,18 @@ enum ThemeColor: String {
     }
 }
 
+class ParallaxConstraint: NSLayoutConstraint {
+    @IBInspectable
+    var defaultConstant: CGFloat = 0.0
+    @IBInspectable
+    var parallaxRatio:CGFloat = 1.0
+}
+
 class Cell: UICollectionViewCell {
     
-    private let parallaxRatio:CGFloat = -1.2
-    private let parallaxRatioL2: CGFloat = -5.0
+    @IBOutlet var horizontalConstraints: [ParallaxConstraint]?
     
-    @IBOutlet var horizontalConstraints: [NSLayoutConstraint]!
-    
-    @IBOutlet var horizontalConstraintsL2: [NSLayoutConstraint]!
+    @IBOutlet var verticalConstraints: [ParallaxConstraint]?
     
     override func drawRect(rect: CGRect) {
         clipsToBounds = false
@@ -53,15 +57,21 @@ class Cell: UICollectionViewCell {
     
     func didScroll(collectionView: UICollectionView) {
         
-        let offsetX = (collectionView.contentOffset.x - frame.minX)
+        let offsetX = collectionView.contentOffset.x - frame.minX
+        let offsetY = collectionView.contentOffset.y - frame.minY
         
-        for horizontalConstraint in horizontalConstraints {
-            horizontalConstraint.constant = offsetX * parallaxRatio
+        if let horizontalConstraints = horizontalConstraints {
+            for horizontalConstraint in horizontalConstraints {
+                horizontalConstraint.constant = horizontalConstraint.defaultConstant + (-offsetX * horizontalConstraint.parallaxRatio)
+            }
         }
         
-        for horizontalConstraint in horizontalConstraintsL2 {
-            horizontalConstraint.constant = offsetX * parallaxRatioL2
+        if let verticalConstraints = verticalConstraints {
+            for verticalConstraint in verticalConstraints {
+                verticalConstraint.constant = verticalConstraint.defaultConstant + (-offsetY * verticalConstraint.parallaxRatio)
+            }
         }
+        
     }
 }
 
