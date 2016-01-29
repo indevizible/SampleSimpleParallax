@@ -96,10 +96,6 @@ class Cell: UICollectionViewCell {
             for verticalConstraint in verticalConstraints {
                 let constant = verticalConstraint.defaultConstant + (-offsetY * verticalConstraint.parallaxRatio)
                 verticalConstraint.constant = constant
-                
-                if collectionView.indexPathForCell(self)!.row == 0 && verticalConstraint.identifier == "txt" {
-                    print(txtView?.frame)
-                }
             }
         }
         
