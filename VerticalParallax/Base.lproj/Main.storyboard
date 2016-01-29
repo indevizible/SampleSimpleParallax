@@ -46,7 +46,7 @@
                                             </constraints>
                                         </imageView>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="character_simplemeal_v5_11" translatesAutoresizingMaskIntoConstraints="NO" id="XHd-5C-w8X">
-                                            <rect key="frame" x="214" y="569" width="175" height="103"/>
+                                            <rect key="frame" x="364" y="46" width="175" height="103"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="103" id="JYf-4Q-Dh6"/>
                                                 <constraint firstAttribute="width" constant="175" id="lEm-qn-bYg"/>
@@ -57,7 +57,7 @@
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="XHd-5C-w8X" firstAttribute="centerX" secondItem="Njz-4F-n9J" secondAttribute="centerX" constant="1" id="3Cf-fI-36n" customClass="ParallaxConstraint" customModule="VerticalParallax" customModuleProvider="target">
+                                    <constraint firstItem="XHd-5C-w8X" firstAttribute="centerX" secondItem="Njz-4F-n9J" secondAttribute="centerX" multiplier="1.5" constant="1" id="3Cf-fI-36n" customClass="ParallaxConstraint" customModule="VerticalParallax" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
                                                 <real key="value" value="1"/>
@@ -67,13 +67,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </constraint>
-                                    <constraint firstItem="XHd-5C-w8X" firstAttribute="centerY" secondItem="Njz-4F-n9J" secondAttribute="centerY" multiplier="2" constant="20" id="49c-hn-XZf" customClass="ParallaxConstraint" customModule="VerticalParallax">
+                                    <constraint firstItem="XHd-5C-w8X" firstAttribute="centerY" secondItem="Njz-4F-n9J" secondAttribute="centerY" multiplier="0.5" constant="-53" id="49c-hn-XZf" customClass="ParallaxConstraint" customModule="VerticalParallax">
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="parallaxRatio">
                                                 <real key="value" value="2.1000000000000001"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
-                                                <real key="value" value="20"/>
+                                                <real key="value" value="-53"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </constraint>
