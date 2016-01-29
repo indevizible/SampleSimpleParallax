@@ -12,6 +12,7 @@
 		90939D6A1C5B0AA000CC3037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90939D681C5B0AA000CC3037 /* Main.storyboard */; };
 		90939D6C1C5B0AA000CC3037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90939D6B1C5B0AA000CC3037 /* Assets.xcassets */; };
 		90939D6F1C5B0AA000CC3037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90939D6D1C5B0AA000CC3037 /* LaunchScreen.storyboard */; };
+		90939D771C5B21D900CC3037 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90939D761C5B21D900CC3037 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		90939D6B1C5B0AA000CC3037 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90939D6E1C5B0AA000CC3037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90939D701C5B0AA000CC3037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90939D761C5B21D900CC3037 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		90939D631C5B0AA000CC3037 /* HorizontalParallax */ = {
 			isa = PBXGroup;
 			children = (
+				90939D761C5B21D900CC3037 /* UIColorExtension.swift */,
 				90939D641C5B0AA000CC3037 /* AppDelegate.swift */,
 				90939D661C5B0AA000CC3037 /* ViewController.swift */,
 				90939D681C5B0AA000CC3037 /* Main.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				90939D671C5B0AA000CC3037 /* ViewController.swift in Sources */,
 				90939D651C5B0AA000CC3037 /* AppDelegate.swift in Sources */,
+				90939D771C5B21D900CC3037 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

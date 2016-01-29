@@ -8,6 +8,27 @@
 
 import UIKit
 
+enum ThemeColor: String {
+    case Black = "#000000"
+    case Blue = "#0000ff"
+    case White = "#ffffff"
+    case Red = "#ff0000"
+    case Green = "#00ff00"
+    
+    func color() -> UIColor {
+        return UIColor(rgba: rawValue)
+    }
+    
+    init?(rawColor:UIColor) {
+        if let color = ThemeColor(rawValue: rawColor.hexString(false)) {
+            self = color
+        }else{
+            return nil
+        }
+    }
+    
+}
+
 class Cell: UICollectionViewCell {
     
     private let parallaxRatio:CGFloat = -1.2
@@ -47,6 +68,10 @@ class Cell: UICollectionViewCell {
 class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     override func viewDidLoad() {
+        
+        print(ThemeColor(rawColor: UIColor.blackColor()))
+        print(ThemeColor(rawValue: "#ff0000"))
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
