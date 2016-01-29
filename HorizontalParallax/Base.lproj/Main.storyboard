@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -21,7 +22,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusableIdentifier" id="bLx-Py-HTG" customClass="Cell" customModule="HorizontalParallax" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusableIdentifierH" id="bLx-Py-HTG" customClass="Cell" customModule="HorizontalParallax" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -109,6 +110,116 @@
                                     <outletCollection property="horizontalConstraints" destination="seX-DB-2FL" collectionClass="NSMutableArray" id="E3M-Sm-ZUI"/>
                                     <outletCollection property="horizontalConstraints" destination="DRB-b1-cSP" collectionClass="NSMutableArray" id="xK7-Hs-B3b"/>
                                     <outletCollection property="horizontalConstraints" destination="HHd-LL-WTg" collectionClass="NSMutableArray" id="qe1-CR-Em8"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusableIdentifierV" id="SsL-d3-faS" customClass="Cell" customModule="HorizontalParallax" customModuleProvider="target">
+                                <rect key="frame" x="600" y="0.0" width="600" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATIC STRING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlY-kc-8mV">
+                                            <rect key="frame" x="91" y="63" width="221" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="ndl-pX-Gx3"/>
+                                                <constraint firstAttribute="width" constant="221" id="u77-PS-tWH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="33"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" image="motor_LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="Rno-6k-Ynx">
+                                            <rect key="frame" x="4" y="154" width="200" height="398"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="7Eq-Af-gSy"/>
+                                                <constraint firstAttribute="height" constant="398" id="fxa-Ti-iTY"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="character_simplemeal_v5_11" translatesAutoresizingMaskIntoConstraints="NO" id="sWk-fk-V4t">
+                                            <rect key="frame" x="364" y="46" width="175" height="103"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="175" id="GtS-wq-FOg"/>
+                                                <constraint firstAttribute="height" constant="103" id="Uhb-Sg-rmS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-lC-FpQ">
+                                            <rect key="frame" x="442" y="322" width="150" height="256"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="256" id="CbG-wF-2OR"/>
+                                                <constraint firstAttribute="width" constant="150" id="eDW-Vc-A46"/>
+                                            </constraints>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="sWk-fk-V4t" firstAttribute="centerY" secondItem="SsL-d3-faS" secondAttribute="centerY" multiplier="0.5" constant="-53" id="2tF-jF-8TR" customClass="ParallaxConstraint" customModule="HorizontalParallax" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="parallaxRatio">
+                                                <real key="value" value="2.1000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
+                                                <real key="value" value="-53"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstItem="dyi-lC-FpQ" firstAttribute="centerY" secondItem="SsL-d3-faS" secondAttribute="centerY" multiplier="1.5" identifier="txt" id="4re-ca-vGO" customClass="ParallaxConstraint" customModule="HorizontalParallax" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="parallaxRatio">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstItem="Rno-6k-Ynx" firstAttribute="centerX" secondItem="SsL-d3-faS" secondAttribute="centerX" multiplier="0.5" priority="750" id="FWA-1o-HLe" customClass="ParallaxConstraint" customModule="HorizontalParallax" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="parallaxRatio">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstItem="Rno-6k-Ynx" firstAttribute="leading" secondItem="SsL-d3-faS" secondAttribute="leading" constant="4" id="Od0-WM-Tds"/>
+                                    <constraint firstItem="QlY-kc-8mV" firstAttribute="centerY" secondItem="SsL-d3-faS" secondAttribute="centerY" multiplier="1/4" constant="1" id="auS-be-wc1"/>
+                                    <constraint firstItem="Rno-6k-Ynx" firstAttribute="centerY" secondItem="SsL-d3-faS" secondAttribute="centerY" constant="53" id="ckc-0O-GIU" customClass="ParallaxConstraint" customModule="HorizontalParallax" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="parallaxRatio">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
+                                                <real key="value" value="53"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstItem="QlY-kc-8mV" firstAttribute="centerX" secondItem="SsL-d3-faS" secondAttribute="centerX" multiplier="2/3" priority="750" constant="1" id="msn-l4-mfX"/>
+                                    <constraint firstItem="QlY-kc-8mV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SsL-d3-faS" secondAttribute="leading" constant="10" id="pfS-I0-Ime"/>
+                                    <constraint firstItem="sWk-fk-V4t" firstAttribute="centerX" secondItem="SsL-d3-faS" secondAttribute="centerX" multiplier="1.5" constant="1" id="uQC-aa-kM9" customClass="ParallaxConstraint" customModule="HorizontalParallax" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="parallaxRatio">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstItem="dyi-lC-FpQ" firstAttribute="trailing" secondItem="SsL-d3-faS" secondAttribute="trailingMargin" id="yz8-Mw-bZI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="txtView" destination="dyi-lC-FpQ" id="YPp-Ct-cGq"/>
+                                    <outletCollection property="verticalConstraints" destination="ckc-0O-GIU" collectionClass="NSMutableArray" id="Zgk-Ru-u6g"/>
+                                    <outletCollection property="verticalConstraints" destination="2tF-jF-8TR" collectionClass="NSMutableArray" id="K3K-R9-DG9"/>
+                                    <outletCollection property="verticalConstraints" destination="4re-ca-vGO" collectionClass="NSMutableArray" id="7xq-R2-apS"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

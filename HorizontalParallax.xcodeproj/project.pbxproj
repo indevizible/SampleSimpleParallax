@@ -13,13 +13,6 @@
 		90939D6C1C5B0AA000CC3037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90939D6B1C5B0AA000CC3037 /* Assets.xcassets */; };
 		90939D6F1C5B0AA000CC3037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90939D6D1C5B0AA000CC3037 /* LaunchScreen.storyboard */; };
 		90939D771C5B21D900CC3037 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90939D761C5B21D900CC3037 /* UIColorExtension.swift */; };
-		90939D7F1C5B5D5A00CC3037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90939D7E1C5B5D5A00CC3037 /* AppDelegate.swift */; };
-		90939D841C5B5D5A00CC3037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90939D821C5B5D5A00CC3037 /* Main.storyboard */; };
-		90939D861C5B5D5A00CC3037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90939D851C5B5D5A00CC3037 /* Assets.xcassets */; };
-		90939D891C5B5D5A00CC3037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90939D871C5B5D5A00CC3037 /* LaunchScreen.storyboard */; };
-		90939D911C5B617000CC3037 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90939D661C5B0AA000CC3037 /* ViewController.swift */; };
-		90939D921C5B617800CC3037 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90939D761C5B21D900CC3037 /* UIColorExtension.swift */; };
-		90939D931C5B7A1500CC3037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90939D6B1C5B0AA000CC3037 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,23 +24,10 @@
 		90939D6E1C5B0AA000CC3037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90939D701C5B0AA000CC3037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90939D761C5B21D900CC3037 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		90939D7C1C5B5D5A00CC3037 /* VerticalParallax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalParallax.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		90939D7E1C5B5D5A00CC3037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90939D831C5B5D5A00CC3037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		90939D851C5B5D5A00CC3037 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		90939D881C5B5D5A00CC3037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		90939D8A1C5B5D5A00CC3037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		90939D5E1C5B0AA000CC3037 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90939D791C5B5D5A00CC3037 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				90939D631C5B0AA000CC3037 /* HorizontalParallax */,
-				90939D7D1C5B5D5A00CC3037 /* VerticalParallax */,
 				90939D621C5B0AA000CC3037 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				90939D611C5B0AA000CC3037 /* HorizontalParallax.app */,
-				90939D7C1C5B5D5A00CC3037 /* VerticalParallax.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,18 +65,6 @@
 				90939D701C5B0AA000CC3037 /* Info.plist */,
 			);
 			path = HorizontalParallax;
-			sourceTree = "<group>";
-		};
-		90939D7D1C5B5D5A00CC3037 /* VerticalParallax */ = {
-			isa = PBXGroup;
-			children = (
-				90939D7E1C5B5D5A00CC3037 /* AppDelegate.swift */,
-				90939D821C5B5D5A00CC3037 /* Main.storyboard */,
-				90939D851C5B5D5A00CC3037 /* Assets.xcassets */,
-				90939D871C5B5D5A00CC3037 /* LaunchScreen.storyboard */,
-				90939D8A1C5B5D5A00CC3037 /* Info.plist */,
-			);
-			path = VerticalParallax;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,23 +87,6 @@
 			productReference = 90939D611C5B0AA000CC3037 /* HorizontalParallax.app */;
 			productType = "com.apple.product-type.application";
 		};
-		90939D7B1C5B5D5A00CC3037 /* VerticalParallax */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 90939D8B1C5B5D5A00CC3037 /* Build configuration list for PBXNativeTarget "VerticalParallax" */;
-			buildPhases = (
-				90939D781C5B5D5A00CC3037 /* Sources */,
-				90939D791C5B5D5A00CC3037 /* Frameworks */,
-				90939D7A1C5B5D5A00CC3037 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = VerticalParallax;
-			productName = VerticalParallax;
-			productReference = 90939D7C1C5B5D5A00CC3037 /* VerticalParallax.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,9 +98,6 @@
 				ORGANIZATIONNAME = "Nattawut Singhchai";
 				TargetAttributes = {
 					90939D601C5B0AA000CC3037 = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					90939D7B1C5B5D5A00CC3037 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -170,7 +116,6 @@
 			projectRoot = "";
 			targets = (
 				90939D601C5B0AA000CC3037 /* HorizontalParallax */,
-				90939D7B1C5B5D5A00CC3037 /* VerticalParallax */,
 			);
 		};
 /* End PBXProject section */
@@ -186,17 +131,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90939D7A1C5B5D5A00CC3037 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90939D891C5B5D5A00CC3037 /* LaunchScreen.storyboard in Resources */,
-				90939D861C5B5D5A00CC3037 /* Assets.xcassets in Resources */,
-				90939D931C5B7A1500CC3037 /* Assets.xcassets in Resources */,
-				90939D841C5B5D5A00CC3037 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -207,16 +141,6 @@
 				90939D671C5B0AA000CC3037 /* ViewController.swift in Sources */,
 				90939D651C5B0AA000CC3037 /* AppDelegate.swift in Sources */,
 				90939D771C5B21D900CC3037 /* UIColorExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90939D781C5B5D5A00CC3037 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90939D911C5B617000CC3037 /* ViewController.swift in Sources */,
-				90939D7F1C5B5D5A00CC3037 /* AppDelegate.swift in Sources */,
-				90939D921C5B617800CC3037 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,22 +159,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				90939D6E1C5B0AA000CC3037 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		90939D821C5B5D5A00CC3037 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				90939D831C5B5D5A00CC3037 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		90939D871C5B5D5A00CC3037 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				90939D881C5B5D5A00CC3037 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -363,28 +271,6 @@
 			};
 			name = Release;
 		};
-		90939D8C1C5B5D5A00CC3037 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VerticalParallax/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = indevizible.VerticalParallax;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		90939D8D1C5B5D5A00CC3037 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VerticalParallax/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = indevizible.VerticalParallax;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -402,14 +288,6 @@
 			buildConfigurations = (
 				90939D741C5B0AA000CC3037 /* Debug */,
 				90939D751C5B0AA000CC3037 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		90939D8B1C5B5D5A00CC3037 /* Build configuration list for PBXNativeTarget "VerticalParallax" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90939D8C1C5B5D5A00CC3037 /* Debug */,
-				90939D8D1C5B5D5A00CC3037 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

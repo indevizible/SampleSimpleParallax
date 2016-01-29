@@ -106,6 +106,8 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     override func viewDidLoad() {
         
+         super.viewDidLoad()
+        
         print(ThemeColor(rawColor: UIColor.blackColor()))
         print(ThemeColor(rawValue: "#ff0000"))
         
@@ -113,9 +115,18 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         print(irisBlue)
         
-        
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let layout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+        if (UIDevice.currentDevice().orientation == UIDeviceOrientation.Portrait || UIDevice.currentDevice().orientation == UIDeviceOrientation.PortraitUpsideDown) {
+            layout.scrollDirection = UICollectionViewScrollDirection.Vertical
+        }
+        else{
+            layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        }
+        collectionView?.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -128,7 +139,11 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("reusableIdentifier", forIndexPath: indexPath) as! Cell
+        
+        let identifier = (UIDevice.currentDevice().orientation == UIDeviceOrientation.Portrait || UIDevice.currentDevice().orientation == UIDeviceOrientation.PortraitUpsideDown) ? "reusableIdentifierV" : "reusableIdentifierH"
+
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! Cell
         if let textView = cell.txtView {
             textView.backgroundColor = indexPath.row % 3 == 0 ? UIColor.redColor() : (indexPath.row % 3 == 1 ? UIColor.greenColor() : UIColor.yellowColor())
         }
@@ -151,4 +166,23 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
             cell.didScroll(collectionView!)
         }
     }
+    
+    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        
+        let layout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        if ((toInterfaceOrientation == UIInterfaceOrientation.LandscapeLeft) || (toInterfaceOrientation == UIInterfaceOrientation.LandscapeRight)){
+            layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        }
+        else{
+            layout.scrollDirection = UICollectionViewScrollDirection.Vertical
+        }
+        
+    }
+
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        collectionView?.reloadData()
+    }
+    
+    
 }
