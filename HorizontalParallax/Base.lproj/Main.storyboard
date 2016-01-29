@@ -1,25 +1,111 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AOV-VS-9Qm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="hCF-ml-eIL">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="AOV-VS-9Qm" customClass="ViewController" customModule="HorizontalParallax" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="tGg-Tp-frC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="edI-o7-hcK">
+                            <size key="itemSize" width="600" height="600"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusableIdentifier" id="bLx-Py-HTG" customClass="Cell" customModule="HorizontalParallax" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEK-2m-rIG">
+                                            <rect key="frame" x="22" y="120" width="79" height="183"/>
+                                            <color key="backgroundColor" red="0.59489071370000002" green="0.74986636640000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="183" id="Fr7-D2-co1"/>
+                                                <constraint firstAttribute="width" constant="79" id="yPF-cq-Erd"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATIC STRING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caa-yO-Cbj">
+                                            <rect key="frame" x="91" y="63" width="221" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="221" id="4jG-fd-XVV"/>
+                                                <constraint firstAttribute="height" constant="26" id="rVD-YL-LUh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="33"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="motor_LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg1-Zb-cQ4">
+                                            <rect key="frame" x="298" y="154" width="307" height="398"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="398" id="XPg-Ud-VHA"/>
+                                                <constraint firstAttribute="width" constant="307" id="smI-U9-D66"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4C-tq-pbe">
+                                            <rect key="frame" x="31" y="516" width="240" height="51"/>
+                                            <color key="backgroundColor" red="0.83921568629999999" green="0.29803921570000003" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="7RO-Dn-lYI"/>
+                                                <constraint firstAttribute="width" constant="240" id="bWW-vq-oQh"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHz-tL-7hj">
+                                            <rect key="frame" x="631" y="36" width="240" height="51"/>
+                                            <color key="backgroundColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="11o-ac-Yd3"/>
+                                                <constraint firstAttribute="width" constant="240" id="jzF-2Y-pUM"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="v4C-tq-pbe" firstAttribute="centerY" secondItem="bLx-Py-HTG" secondAttribute="centerY" multiplier="1.8" constant="1" id="Bnx-ek-LRI"/>
+                                    <constraint firstItem="Zg1-Zb-cQ4" firstAttribute="centerX" secondItem="bLx-Py-HTG" secondAttribute="centerX" multiplier="1.5" constant="1" id="DUN-gL-d6m"/>
+                                    <constraint firstItem="caa-yO-Cbj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bLx-Py-HTG" secondAttribute="leading" constant="10" id="Jkc-Px-RKP"/>
+                                    <constraint firstItem="Zg1-Zb-cQ4" firstAttribute="centerY" secondItem="bLx-Py-HTG" secondAttribute="centerY" constant="53" id="L0j-1S-TsZ"/>
+                                    <constraint firstItem="BHz-tL-7hj" firstAttribute="centerY" secondItem="bLx-Py-HTG" secondAttribute="centerY" multiplier="0.2" constant="1" id="YUo-mK-sjh"/>
+                                    <constraint firstItem="JEK-2m-rIG" firstAttribute="centerX" secondItem="bLx-Py-HTG" secondAttribute="centerX" multiplier="0.2" constant="1" id="gRg-fM-vDM"/>
+                                    <constraint firstItem="caa-yO-Cbj" firstAttribute="centerY" secondItem="bLx-Py-HTG" secondAttribute="centerY" multiplier="1/4" constant="1" id="l31-tY-azF"/>
+                                    <constraint firstItem="v4C-tq-pbe" firstAttribute="centerX" secondItem="bLx-Py-HTG" secondAttribute="centerX" multiplier="0.5" constant="1" id="qgw-Xx-rny"/>
+                                    <constraint firstItem="caa-yO-Cbj" firstAttribute="centerX" secondItem="bLx-Py-HTG" secondAttribute="centerX" multiplier="2/3" priority="750" constant="1" id="sN5-Wv-vow"/>
+                                    <constraint firstItem="BHz-tL-7hj" firstAttribute="centerX" secondItem="bLx-Py-HTG" secondAttribute="centerX" multiplier="2.5" constant="1" id="xGU-eh-Ij5"/>
+                                    <constraint firstItem="JEK-2m-rIG" firstAttribute="centerY" secondItem="bLx-Py-HTG" secondAttribute="centerY" multiplier="0.7" constant="1" id="xiW-Bh-JYp"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="horizontalConstraints" destination="DUN-gL-d6m" collectionClass="NSMutableArray" id="ych-SP-oMl"/>
+                                    <outletCollection property="horizontalConstraints" destination="gRg-fM-vDM" collectionClass="NSMutableArray" id="OqE-ng-jK9"/>
+                                    <outletCollection property="horizontalConstraintsL2" destination="qgw-Xx-rny" collectionClass="NSMutableArray" id="JF8-M8-NaN"/>
+                                    <outletCollection property="horizontalConstraintsL2" destination="xGU-eh-Ij5" collectionClass="NSMutableArray" id="jp3-KZ-ZHG"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="AOV-VS-9Qm" id="4zv-k2-J4r"/>
+                            <outlet property="delegate" destination="AOV-VS-9Qm" id="dR0-1c-Lje"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Lq-oF-2Ze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="-227"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="motor_LOGO" width="791" height="1024"/>
+    </resources>
 </document>
