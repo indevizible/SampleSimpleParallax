@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -39,10 +40,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" image="motor_LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="pxZ-aD-U52">
-                                            <rect key="frame" x="4" y="154" width="307" height="398"/>
+                                            <rect key="frame" x="4" y="154" width="200" height="398"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="398" id="dej-du-ha6"/>
-                                                <constraint firstAttribute="width" constant="307" id="yU5-T3-5aE"/>
+                                                <constraint firstAttribute="width" constant="200" id="yU5-T3-5aE"/>
                                             </constraints>
                                         </imageView>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="character_simplemeal_v5_11" translatesAutoresizingMaskIntoConstraints="NO" id="XHd-5C-w8X">
@@ -52,11 +53,32 @@
                                                 <constraint firstAttribute="width" constant="175" id="lEm-qn-bYg"/>
                                             </constraints>
                                         </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hAR-Yj-QA3">
+                                            <rect key="frame" x="442" y="322" width="150" height="256"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="Iyi-fR-wvG"/>
+                                                <constraint firstAttribute="height" constant="256" id="jA5-kw-n38"/>
+                                            </constraints>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="hAR-Yj-QA3" firstAttribute="centerY" secondItem="Njz-4F-n9J" secondAttribute="centerY" multiplier="1.5" identifier="txt" id="0do-aR-yLI" customClass="ParallaxConstraint" customModule="VerticalParallax" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="parallaxRatio">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                     <constraint firstItem="XHd-5C-w8X" firstAttribute="centerX" secondItem="Njz-4F-n9J" secondAttribute="centerX" multiplier="1.5" constant="1" id="3Cf-fI-36n" customClass="ParallaxConstraint" customModule="VerticalParallax" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
@@ -88,6 +110,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </constraint>
                                     <constraint firstItem="HT9-kl-dtV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Njz-4F-n9J" secondAttribute="leading" constant="10" id="CEm-ME-Ofm"/>
+                                    <constraint firstItem="hAR-Yj-QA3" firstAttribute="trailing" secondItem="Njz-4F-n9J" secondAttribute="trailingMargin" id="Jd3-zf-ZdR"/>
                                     <constraint firstItem="HT9-kl-dtV" firstAttribute="centerY" secondItem="Njz-4F-n9J" secondAttribute="centerY" multiplier="1/4" constant="1" id="LJr-yv-LMe"/>
                                     <constraint firstItem="HT9-kl-dtV" firstAttribute="centerX" secondItem="Njz-4F-n9J" secondAttribute="centerX" multiplier="2/3" priority="750" constant="1" id="NpG-y7-oRJ"/>
                                     <constraint firstItem="pxZ-aD-U52" firstAttribute="centerY" secondItem="Njz-4F-n9J" secondAttribute="centerY" constant="53" id="ZXr-D4-t8J" customClass="ParallaxConstraint" customModule="VerticalParallax">
@@ -103,8 +126,10 @@
                                     <constraint firstItem="pxZ-aD-U52" firstAttribute="leading" secondItem="Njz-4F-n9J" secondAttribute="leading" constant="4" id="hMN-zP-HH9"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="txtView" destination="hAR-Yj-QA3" id="wYy-bP-2EX"/>
                                     <outletCollection property="verticalConstraints" destination="ZXr-D4-t8J" collectionClass="NSMutableArray" id="qEb-CC-Pmr"/>
                                     <outletCollection property="verticalConstraints" destination="49c-hn-XZf" collectionClass="NSMutableArray" id="kcN-68-pVE"/>
+                                    <outletCollection property="verticalConstraints" destination="0do-aR-yLI" collectionClass="NSMutableArray" id="AAS-lb-qzI"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

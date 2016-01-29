@@ -21,7 +21,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusableIdentifier" id="bLx-Py-HTG" customClass="Cell" customModule="HorizontalParallax" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusableIdentifier" id="bLx-Py-HTG" customClass="Cell" customModule="HorizontalParallax" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -46,24 +46,45 @@
                                             </constraints>
                                         </imageView>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="character_simplemeal_v5_11" translatesAutoresizingMaskIntoConstraints="NO" id="Tag-MH-TEY">
-                                            <rect key="frame" x="814" y="248" width="175" height="103"/>
+                                            <rect key="frame" x="425" y="248" width="175" height="103"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="175" id="9oU-Nh-xhk"/>
                                                 <constraint firstAttribute="height" constant="103" id="yoP-79-cxn"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-hB-lbY">
+                                            <rect key="frame" x="306" y="454" width="288" height="101"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="101" id="A7h-b9-e3e"/>
+                                                <constraint firstAttribute="width" constant="288" id="mE4-3T-w1g"/>
+                                            </constraints>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </mutableString>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Tag-MH-TEY" firstAttribute="centerX" secondItem="bLx-Py-HTG" secondAttribute="centerX" multiplier="3" constant="1" id="DRB-b1-cSP" customClass="ParallaxConstraint" customModule="HorizontalParallax" customModuleProvider="target">
+                                    <constraint firstItem="Tag-MH-TEY" firstAttribute="centerX" secondItem="bLx-Py-HTG" secondAttribute="centerX" multiplier="2" constant="-88" id="DRB-b1-cSP" customClass="ParallaxConstraint" customModule="HorizontalParallax" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="-88"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="parallaxRatio">
                                                 <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstItem="A3K-hB-lbY" firstAttribute="centerX" secondItem="bLx-Py-HTG" secondAttribute="centerX" multiplier="1.5" id="HHd-LL-WTg" customClass="ParallaxConstraint" customModule="HorizontalParallax" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="defaultConstant">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="parallaxRatio">
+                                                <real key="value" value="0.20000000000000001"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </constraint>
@@ -81,11 +102,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="A3K-hB-lbY" secondAttribute="bottom" constant="45" id="wVN-0h-t7z"/>
                                     <constraint firstItem="Tag-MH-TEY" firstAttribute="centerY" secondItem="bLx-Py-HTG" secondAttribute="centerY" id="zKl-n7-xm4"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="horizontalConstraints" destination="seX-DB-2FL" collectionClass="NSMutableArray" id="E3M-Sm-ZUI"/>
                                     <outletCollection property="horizontalConstraints" destination="DRB-b1-cSP" collectionClass="NSMutableArray" id="xK7-Hs-B3b"/>
+                                    <outletCollection property="horizontalConstraints" destination="HHd-LL-WTg" collectionClass="NSMutableArray" id="qe1-CR-Em8"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

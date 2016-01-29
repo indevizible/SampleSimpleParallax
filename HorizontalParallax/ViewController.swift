@@ -38,37 +38,68 @@ class ParallaxConstraint: NSLayoutConstraint {
 
 class Cell: UICollectionViewCell {
     
+    @IBOutlet weak var txtView: UITextView?
+    
     @IBOutlet var horizontalConstraints: [ParallaxConstraint]?
     
     @IBOutlet var verticalConstraints: [ParallaxConstraint]?
     
     override func drawRect(rect: CGRect) {
-        clipsToBounds = false
-        contentView.clipsToBounds = false
+
         
         var tmpView:UIView? = self
         while let view = tmpView {
             if view.clipsToBounds {
-                view.clipsToBounds = false
+                view.clipsToBounds = true
             }
             tmpView = view.superview
+            if let _ = tmpView as? UICollectionView  {
+                return
+            }
         }
     }
+    
+    override func layoutSubviews() {
+        
+        super.layoutSubviews()
+        if let horizontalConstraints = horizontalConstraints {
+            for horizontalConstraint in horizontalConstraints {
+                let constant = horizontalConstraint.defaultConstant
+                horizontalConstraint.constant = constant
+            }
+        }
+        
+        if let verticalConstraints = verticalConstraints {
+            for verticalConstraint in verticalConstraints {
+                let constant = verticalConstraint.defaultConstant
+                verticalConstraint.constant = constant
+            }
+        }
+    }
+    
     
     func didScroll(collectionView: UICollectionView) {
         
         let offsetX = collectionView.contentOffset.x - frame.minX
         let offsetY = collectionView.contentOffset.y - frame.minY
         
+        
         if let horizontalConstraints = horizontalConstraints {
             for horizontalConstraint in horizontalConstraints {
-                horizontalConstraint.constant = horizontalConstraint.defaultConstant + (-offsetX * horizontalConstraint.parallaxRatio)
+                let constant = horizontalConstraint.defaultConstant + (-offsetX * horizontalConstraint.parallaxRatio)
+                horizontalConstraint.constant = constant
+
             }
         }
         
         if let verticalConstraints = verticalConstraints {
             for verticalConstraint in verticalConstraints {
-                verticalConstraint.constant = verticalConstraint.defaultConstant + (-offsetY * verticalConstraint.parallaxRatio)
+                let constant = verticalConstraint.defaultConstant + (-offsetY * verticalConstraint.parallaxRatio)
+                verticalConstraint.constant = constant
+                
+                if collectionView.indexPathForCell(self)!.row == 0 && verticalConstraint.identifier == "txt" {
+                    print(txtView?.frame)
+                }
             }
         }
         
@@ -97,11 +128,15 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 10
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCellWithReuseIdentifier("reusableIdentifier", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("reusableIdentifier", forIndexPath: indexPath) as! Cell
+        if let textView = cell.txtView {
+            textView.backgroundColor = indexPath.row % 3 == 0 ? UIColor.redColor() : (indexPath.row % 3 == 1 ? UIColor.greenColor() : UIColor.yellowColor())
+        }
+        return cell
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {

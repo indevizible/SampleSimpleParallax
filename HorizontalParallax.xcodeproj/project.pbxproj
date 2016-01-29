@@ -19,6 +19,7 @@
 		90939D891C5B5D5A00CC3037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90939D871C5B5D5A00CC3037 /* LaunchScreen.storyboard */; };
 		90939D911C5B617000CC3037 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90939D661C5B0AA000CC3037 /* ViewController.swift */; };
 		90939D921C5B617800CC3037 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90939D761C5B21D900CC3037 /* UIColorExtension.swift */; };
+		90939D931C5B7A1500CC3037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90939D6B1C5B0AA000CC3037 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -191,6 +192,7 @@
 			files = (
 				90939D891C5B5D5A00CC3037 /* LaunchScreen.storyboard in Resources */,
 				90939D861C5B5D5A00CC3037 /* Assets.xcassets in Resources */,
+				90939D931C5B7A1500CC3037 /* Assets.xcassets in Resources */,
 				90939D841C5B5D5A00CC3037 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
